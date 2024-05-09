@@ -1,4 +1,4 @@
-<?php defined( 'ABSPATH' ) OR die( 'This script cannot be accessed directly.' );
+<?php defined('ABSPATH') or die('This script cannot be accessed directly.');
 
 /**
  * The template for displaying archives pages
@@ -7,13 +7,13 @@
  * you should find all the needed hooks there.
  */
 
-if ( function_exists( 'us_load_template' ) ) {
+if (function_exists('us_load_template')) {
 
-	us_load_template( 'templates/archive' );
-
+	us_load_template('templates/archive');
 } else {
 	get_header();
-	?>
+?>
+
 	<main id="page-content" class="l-main">
 		<section class="l-section">
 			<div class="l-section-h i-cf">
@@ -21,12 +21,12 @@ if ( function_exists( 'us_load_template' ) ) {
 					<?php the_archive_title(); ?>
 				</h1>
 				<?php
-				if ( have_posts() ) {
+				if (have_posts()) {
 
 					// Load posts loop
-					while ( have_posts() ) {
+					while (have_posts()) {
 						the_post();
-						get_template_part( 'content' );
+						get_template_part('content');
 					}
 
 					// Pagination
@@ -37,14 +37,13 @@ if ( function_exists( 'us_load_template' ) ) {
 							'after_page_number' => '</span>',
 						)
 					);
-
 				} else {
-					echo us_translate( 'No results found.' );
+					echo us_translate('No results found.');
 				}
 				?>
 			</div>
 		</section>
 	</main>
-	<?php
+<?php
 	get_footer();
 }

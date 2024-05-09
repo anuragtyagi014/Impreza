@@ -1,4 +1,4 @@
-<?php defined( 'ABSPATH' ) OR die( 'This script cannot be accessed directly.' );
+<?php defined('ABSPATH') or die('This script cannot be accessed directly.');
 
 /**
  * The template for displaying website header
@@ -7,20 +7,22 @@
  * you should find all the needed hooks there.
  */
 
-if ( function_exists( 'us_load_template' ) ) {
+if (function_exists('us_load_template')) {
 
-	us_load_template( 'templates/header' );
-
+	us_load_template('templates/header');
 } else {
-	?>
+?>
+
 	<!DOCTYPE HTML>
-	<html class="no-touch" <?php language_attributes( 'html' ) ?>>
+	<html class="no-touch" <?php language_attributes('html') ?>>
+
 	<head>
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
+		<meta charset="<?php bloginfo('charset'); ?>">
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class( 'l-body header_hor state_default NO_US_CORE' ); ?>>
-	<?php wp_body_open(); ?>
+
+	<body <?php body_class('l-body header_hor state_default NO_US_CORE'); ?>>
+		<?php wp_body_open(); ?>
 		<div class="l-canvas">
 			<header class="l-header pos_static">
 				<div class="l-subheader at_middle">
@@ -28,7 +30,7 @@ if ( function_exists( 'us_load_template' ) ) {
 						<div class="l-subheader-cell at_left">
 							<div class="w-text">
 								<a class="w-text-h" href="/">
-									<span class="w-text-value"><?php bloginfo( 'name' ); ?></span>
+									<span class="w-text-value"><?php bloginfo('name'); ?></span>
 								</a>
 							</div>
 						</div>
@@ -53,5 +55,5 @@ if ( function_exists( 'us_load_template' ) ) {
 					</div>
 				</div>
 			</header>
-	<?php
-}
+		<?php
+	}

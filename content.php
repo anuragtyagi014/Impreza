@@ -7,6 +7,7 @@
 
 if (is_singular()) {
 ?>
+
 	<section class="l-section">
 		<div class="l-section-h i-cf">
 		<?php
